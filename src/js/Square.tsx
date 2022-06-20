@@ -9,11 +9,16 @@ type Props = {
     isWinningSquare: boolean;
 };
 
+/**
+ * The Square component
+ * @param {Props} props
+ * @constructor
+ */
 export default function Square(props: Props) {
-    const classList = classLists('square', [props.isWinningSquare, 'win']);
-    return (
-        <button className={classList} onClick={props.onClick}>
-            {props.value}
-        </button>
-    );
+  const classList = classLists('square', [props.isWinningSquare, 'win']);
+  return (
+    <button className={classList} onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
 }
